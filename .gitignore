@@ -1,140 +1,48 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-## == this needs some culling & cleaning !!!
+# General-purpose ignores for different operating systems and editors.
+# ===================================================================
 
-# from recent igonre
+# OS-specific files
+.DS_Store
+Thumbs.db
+._*
+.AppleDouble
+.LSOverride
+$RECYCLE.BIN/
 
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.orig
+# Log and temporary files
 *.log
+log.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.err
+*.diff
 *.rej
+*.orig
 *.swo
 *.swp
-*.vi
 *~
+.tmp/
+*.tmp
 
-# OS or Editor folders
+# Editor & IDE specific folders and files
+.idea/
+.vscode/
 .project
 .settings
 .tmproj
 *.esproj
-nbproject
-
-# Komodo
+nbproject/
 *.komodoproject
-.komodotools
+.komodotools/
+*.sublime-project
+*.sublime-workspace
+sftp-config.json
 
-# Folders to ignore
-.hg
-.svn
-.CVS
-intermediate
-publish
-.idea
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc envoronmental files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# build script local files
-node_modules
-node_modules/**
-build/buildinfo.properties
-build/config/buildinfo.properties
-/inc/.DS_Store
-dist/**
-
-# build logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-#from an old flsuhed pout ignore
-# Specifies intentionally untracked files to ignore when using Git
-# http://git-scm.com/docs/gitignore
-
-*~
-*.sw[mnpcod]
-.tmp
-*.tmp
-*.tmp.*
-
-UserInterfaceState.xcuserstate
-$RECYCLE.BIN/
-
-*.log
-log.txt
-npm-debug.log*
-
-/.idea
-/.ionic
-/.sass-cache
-/.sourcemaps
-/.versions
-/.vscode
-/coverage
-/dist
-/node_modules
-/platforms
-/plugins
-/html-app/www
-
-
-#temp & cache
-*.imi
-.tmp
-.cache
-.sass-cache
-bower_components
-test/bower_components
-
-
-# macOS / File sys 
-.DS_Store
-/.DS_Store
-/app/.DS_Store
-Thumbs.db
-.AppleDouble
-.LSOverride
-
-# Icon must end with two \r
-# Icon
-
-# Thumbnails
-._*
-
-# EDITOR
-# Cache files for Sublime Text
+# Sublime Text cache files
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
-
-# Workspace files are user-specific
-#*.sublime-project
-*.sublime-workspace
-
-# Project files should be checked into the repository, unless a significant
-# proportion of contributors will probably not be using Sublime Text
-# *.sublime-project
-
-# SFTP configuration file
-sftp-config.json
-
-# Package control specific files
 Package Control.last-run
 Package Control.ca-list
 Package Control.ca-bundle
@@ -145,22 +53,37 @@ Package Control.merged-ca-bundle
 Package Control.user-ca-bundle
 oscrypto-ca-bundle.crt
 bh_unicode_properties.cache
-
-# Sublime-github package stores a github token in this file
-# https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
-/.idea/workspace.xml
-/.idea/PAXINT2240-HCP-micro.iml
-/.idea/modules.xml
-/.idea/inspectionProfiles
-/.idea/dictionaries
-/.idea/vcs.xml
-/.idea/typescript-compiler.xml
-/.idea/misc.xml
-/.idea/jsLibraryMappings.xml
 
+# Build, dependency, and environment files
+# =========================================
 
-#personal shorthands
+# Dependency directories
+/node_modules/
+/bower_components/
+/.pnp
+.pnp.js
+
+# Build and distribution output
+/build/
+/dist/
+/coverage/
+/publish/
+/intermediate/
+
+# Environment variables (keep your secrets out of the repo)
+.env
+.env.local
+.env.*.local
+
+# Project-specific ignores
+# ========================
+# Add any files or folders specific to the project you're currently in.
+# For example:
+# /my-secret-folder/
+
+# Personal shorthands (from your original file)
+# ==============================================
 _hold
 _docs
 _comps*
