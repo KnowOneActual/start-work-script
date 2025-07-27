@@ -2,13 +2,25 @@
 
 # --- Git Workflow Starter ---
 # This script automates the process of starting a new task.
-# 1. Asks for a branch name.
-# 2. Syncs the main branch.
-# 3. Creates and switches to the new branch.
+# 1. Checks for uncommitted changes.
+# 2. Asks for a branch name.
+# 3. Syncs the main branch.
+# 4. Creates and switches to the new branch.
 
 # Set the default main branch name. Change if you use "master".
 MAIN_BRANCH="main"
 
+# --- Step 1: Check for a clean working directory ---
+echo "🔄 Preparing your workspace..."
+if [ -n "$(git status --porcelain)" ]; then
+    echo "❌ Your working directory is not clean. Please commit or stash your changes before starting a new task."
+    exit 1
+fi
+
+echo "✅ Your workspace is clean."
+echo ""
+
+# --- Step 2: Get the new branch name ---
 echo "Enter the name for your new branch (e.g., feature/add-user-login):"
 read -r BRANCH_NAME
 
@@ -19,9 +31,8 @@ if [ -z "$BRANCH_NAME" ]; then
 fi
 
 echo ""
-echo "🔄 Preparing your workspace..."
 
-# --- Step 1: Syncing the main branch ---
+# --- Step 3: Syncing the main branch ---
 echo "1. Switching to '$MAIN_BRANCH' branch..."
 git checkout $MAIN_BRANCH
 
@@ -34,7 +45,7 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# --- Step 2: Creating the new branch ---
+# --- Step 4: Creating the new branch ---
 echo "3. Creating and switching to new branch: '$BRANCH_NAME'..."
 git checkout -b "$BRANCH_NAME"
 
