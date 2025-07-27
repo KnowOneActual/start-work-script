@@ -1,4 +1,5 @@
 # Git Workflow Starter Script
+
 [![Made with Shell Script](https://img.shields.io/badge/Made%20with-Shell%20Script-1f425f.svg)](https://www.gnu.org/software/bash/)
 [![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux-blue)](https://www.gnu.org/software/bash/)
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/knowoneactual)
@@ -15,10 +16,11 @@ This script prevents those mistakes by turning a multi-step process into a singl
 
 When you run the script, it will:
 
-1.  Prompt you to enter a descriptive name for your new branch.
-2.  Automatically switch to your main branch (`main` or `master`).
-3.  Pull the latest changes from the remote to ensure your local version is up-to-date.
-4.  Create and switch to your new branch.
+1.  **Check for uncommitted changes** to make sure your work is saved.
+2.  Prompt you to enter a descriptive name for your new branch.
+3.  Automatically switch to your main branch (`main` or `master`).
+4.  Pull the latest changes from the remote to ensure your local version is up-to-date.
+5.  Create and switch to your new branch.
 
 You're left with a fresh, clean branch, ready for you to start coding.
 
