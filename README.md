@@ -1,3 +1,5 @@
+# **This repository is now deprecated and has been integrated into the [Project_Starter_Script](https://github.com/KnowOneActual/Project_Starter_Script) Repository** 
+
 # Git Workflow Starter Script
 
 [![Made with Shell Script](https://img.shields.io/badge/Made%20with-Shell%20Script-1f425f.svg)](https://www.gnu.org/software/bash/)
